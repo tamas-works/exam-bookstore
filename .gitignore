@@ -184,3 +184,4 @@ student_work/
 *.tar.gz
 *.rar
 *.7z
+bookstore/settings.py
