@@ -128,5 +128,4 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # REST Framework Configuration
 
 
-test=1
-2
+test=2
