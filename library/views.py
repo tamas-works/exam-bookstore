@@ -2,8 +2,8 @@ from django.shortcuts import render
 from rest_framework import viewsets, filters
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from django_filters.rest_framework import DjangoFilterBackend
-from .models import  Author,Book, Category
+from django_filters.rest_framework import DjangoFilterBackend # pyright: ignore[reportMissingModuleSource]
+from .models import  Author, Book, Category
 from .serializers import BookSerializer, AuthorSerializer, CategorySerializer
 
 
@@ -30,7 +30,7 @@ class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.select_related("author","category").all()
     serializer_class = BookSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ["author", "published_date"]
+    filterset_fields = ["author", "published_date",]
     search_fields = ["title", "author__first_name", "author__last_name", "category__name"]
     ordering_fields = ["title", "published_date", "price", "stock"]
     ordering = ["title", "-published_date"]
