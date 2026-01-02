@@ -184,4 +184,5 @@ student_work/
 *.tar.gz
 *.rar
 *.7z
-/bookstore/settings.py
+# Django settings
+bookstore/settings.py
