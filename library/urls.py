@@ -4,9 +4,9 @@ from .views import AuthorViewSet, BookViewSet, CategoryViewSet
 
 router = DefaultRouter()
 router.register(r"authors", AuthorViewSet)
-router.register(r"categories", CategoryViewSet)
 router.register(r"books", BookViewSet)
+router.register(r"categories", CategoryViewSet)
 
 urlpatterns = [
-    path("api/", include(router.urls)),
+    path("", include(router.urls)),
 ]

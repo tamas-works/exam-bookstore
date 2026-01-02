@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import Book, Author, Category
+from .models import Book, Author, Category
 
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,7 +15,9 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class BookSerializer(serializers.ModelSerializer):
-    category_name = serializers.CharFieldeld(source="category.name", read_only=True)
+    category_name = serializers.CharField(source="category.name", read_only=True)
+
+
     author_first_name = serializers.CharField(
         source="author.first_name", read_only=True
     )
@@ -27,5 +29,5 @@ class BookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book
-        fields = ["id","title","published_date","price","stock","category","author","category_name","is_available","created_at","updated_at",]
+        fields = ["id","title","published_date","price","stock","category","author_first_name","author_middle_name","author_last_name","category_name","is_available","created_at","updated_at",]
         read_only_fields = ["id", "created_at", "updated_at"]
