@@ -1,24 +1,22 @@
 bookstore-exam/
-├── bookstore/                 # Projekt szint
+├── bookstore/                      # Projekt konfiguráció mappa
 │   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
+│   ├── asgi.py                     # ASGI konfig (async)
+│   ├── settings.py                 # Globális beállítások (DB, apps, stb.)
+│   ├── urls.py                     # Root URL routing
+│   └── wsgi.py                     # WSGI konfig (deployment)
 │
-├── library/                   # Alkalmazás (app)
-│   ├── migrations/
+├── library/                        # Alkalmazás (app)
+│   ├── migrations/                 # Adatbázis migrációk (auto-generált)
 │   │   └── __init__.py
 │   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── serializers.py
-│   ├── views.py
-│   ├── urls.py
-│   └── tests.py
+│   ├── admin.py                    # Admin panel konfiguráció
+│   ├── apps.py                     # App konfiguráció
+│   ├── models.py                   # Modellek (Category, Product)
+│   ├── serializers.py              # DRF serializers (JSON <-> Model)
+│   ├── views.py                    # ViewSets (API logika)
+│   ├── urls.py                     # App-specifikus URL routing
+│   └── tests.py                    # Unit tesztek
 │
-├── db.sqlite3                 # Fejlesztői adatbázis
-├── manage.py                  # Django CLI
-├── requirements.txt           # Függőségek
-└── README.md                  # Dokumentáció
+├── requirements.txt                # Python függőségek listája
+└── README.md                       # Projekt dokumentáció
