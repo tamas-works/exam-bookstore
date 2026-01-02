@@ -19,4 +19,4 @@ bookstore-exam/
 │   └── tests.py                    # Unit tesztek
 │
 ├── requirements.txt                # Python függőségek listája
-└── README.md                       # Projekt dokumentáció
+└── README.md  
