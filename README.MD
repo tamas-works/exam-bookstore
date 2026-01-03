@@ -48,6 +48,7 @@ bookstore-exam/
 │   ├── urls.py                     # App-specific routing
 │   └── tests.py                    # Tests (optional)
 │
+├── postman/                        # Postman collection and API tests
 ├── screenshot/                     # Screenshots
 ├── .gitignore
 ├── db.sqlite3                      # Local development database
